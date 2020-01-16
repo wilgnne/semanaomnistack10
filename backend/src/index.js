@@ -1,15 +1,15 @@
 const express = require ("express");
 const moongoose = require ("mongoose");
+const cors = require ("cors");
+
 const routes = require ("./routes");
+const mongoConfig = require("./services/mongoService");
 
 const app = express ();
 
-moongoose.connect ("mongodb+srv://wilgnne:wilgnne@cluster0-fov9a.mongodb.net/week10?retryWrites=true&w=majority",
-{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+moongoose.connect (mongoConfig.uris, mongoConfig.options);
 
+app.use(cors());
 app.use (express.json ());
 app.use (routes);
 
