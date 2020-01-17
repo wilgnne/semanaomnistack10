@@ -1,9 +1,9 @@
-const express = require ("express");
-const moongoose = require ("mongoose");
-const cors = require ("cors");
+const express = require ('express');
+const moongoose = require ('mongoose');
+const cors = require ('cors');
 
-const routes = require ("./routes");
-const mongoConfig = require("./services/mongoService");
+const routes = require ('./routes');
+const mongoConfig = require('./services/mongoService');
 
 const app = express ();
 
