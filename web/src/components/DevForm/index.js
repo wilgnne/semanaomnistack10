@@ -52,7 +52,7 @@ function DevForm({ onSubmit }) {
           </div>
 
           <div className="input-block">
-            <label htmlFor="techs">Technologias</label>
+            <label htmlFor="techs">Tecnologias</label>
             <input
               name="techs" 
               id="techs" 

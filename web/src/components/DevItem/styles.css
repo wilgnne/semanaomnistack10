@@ -1,44 +1,68 @@
-li.dev-item {
+.dev-item {
     background: #ffffff;
     box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
-    border-radius: 2px;
-    padding: 20px;
+    border-radius: 5px;
 }
 
-li.dev-item header {
+.dev-item-body {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.dev-item-controllers {
+    display: flex;
+    padding-top: 5px;
+    padding-right: 5px;
+    justify-content: flex-end;
+}
+
+.controller-button {
+    border: 0;
+    cursor: pointer;
+    background: #eee;
+    border-radius: 5px;
+    margin-left: 5px
+}
+.controller-button:hover {
+    background: #ddd;
+}
+
+.dev-item header {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-li.dev-item p {
+.dev-item p {
     color: #666;
     font-size: 14px;
     line-height: 20px;
     margin: 10px 0;
 }
 
-li.dev-item a {
+.dev-item a {
     color: #8e4dff;
     font-size: 14px;
     text-decoration: none;
 }
 
-li.dev-item a:hover {
+.dev-item a:hover {
     color: #5a2ea6;
 }
 
-li.dev-item header img {
+.dev-item header img {
     widows: 54px;
     height: 54px;
     border-radius: 50%;
 }
 
-li.dev-item header .user-info {
+.dev-item header .user-info {
     margin-left: 10px;
 }
 
 .user-info strong {
+    
     display: block;
     font-size: 16px;
     color: #333;

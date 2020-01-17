@@ -40,6 +40,16 @@ function App() {
     setDevs([...devs, response.data]);
   }
 
+  async function handleRemoveDev(dev) {
+    const response = await api.delete(`/devs/${dev.github_username}`);
+    console.log(response);
+
+    setDevs(devs.filter(d => d.github_username !== dev.github_username));
+  }
+
+  async function handleEditDev(dev) {
+  }
+
   return (
     <div id="app">
       <aside>
@@ -50,7 +60,12 @@ function App() {
         <ul>
 
           {devs.map(dev => (
-            <DevItem key={dev._id} dev={dev} />
+            <DevItem 
+              key={dev._id} 
+              dev={dev} 
+              onDestroy={handleRemoveDev}
+              onEdit={handleEditDev}
+            />
           ))}
 
         </ul>
