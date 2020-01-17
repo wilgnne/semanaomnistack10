@@ -46,8 +46,6 @@ function Main({ navigation }) {
       }
     });
 
-    console.log(response.data);
-
     setDevs(response.data);
   }
 
