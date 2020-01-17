@@ -2,6 +2,8 @@ import React from 'react';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 
+import captalizeString from '../../utils/captalizeString';
+
 import './styles.css';
 
 function DevItem({dev, onDestroy, onEdit}) {
@@ -38,7 +40,7 @@ function DevItem({dev, onDestroy, onEdit}) {
                     />
                     <div className="user-info">
                         <strong>{dev.name}</strong>
-                        <span>{dev.techs.join(', ')}</span>
+                        <span>{dev.techs.map(captalizeString).join(', ')}</span>
                     </div>
                 </header>
                 <p>{dev.bio}</p>

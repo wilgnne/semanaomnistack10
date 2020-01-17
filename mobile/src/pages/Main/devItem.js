@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, Image, View, Text } from 'react-native';
 import { Marker, Callout } from 'react-native-maps';
 
+import captalizeString from '../../utils/captalizeString';
+
 function DevItem({ dev, onPress }) {
   return (
     <Marker 
@@ -22,7 +24,7 @@ function DevItem({ dev, onPress }) {
         <View style={styles.callout}>
           <Text style={styles.devName}>{dev.name}</Text>
           <Text style={styles.devBio}>{dev.bio}</Text>
-          <Text style={styles.devTechs}>{dev.techs.join(', ')}</Text>
+          <Text style={styles.devTechs}>{dev.techs.map(captalizeString).join(', ')}</Text>
         </View>
       </Callout>
     </Marker>

@@ -24,7 +24,7 @@ module.exports = {
 
       const { name = login, avatar_url, bio } = apiResponse.data;
 
-      const techsArray = parseStringAsArray (techs);
+      const techsArray = parseStringAsArray (techs.toLowerCase());
 
       const location = {
         type: "Point",
@@ -48,7 +48,7 @@ module.exports = {
     const { id } = request.params;
     const { name, techs, latitude, longitude } = request.body;
     console.log(request.body, id);
-    const techsArray = parseStringAsArray(techs);
+    const techsArray = parseStringAsArray(techs.toLowerCase());
 
     const location = {
       type: "Point",
